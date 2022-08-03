@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to top left, #3df8f2, #00779b);
+  font-family: "Nunito", sans-serif;
+}
+
+main {
+  position: relative;
+  width: 70vw;
+  height: 75vh;
+  display: flex;
+  border-style: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.player {
+  flex: 50%;
+  display: flex;
+  padding: 4rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff80;
+}
+
+.player--active {
+  background-color: #ffffffc4;
+}
+.name {
+  position: relative;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.score {
+  font-size: 5rem;
+  /* margin-bottom: auto; */
+  color: #16bdf0;
+}
+
+.current {
+  display: flex;
+  color: #fff;
+  opacity: 0.8;
+  width: 55%;
+  flex-direction: column;
+  text-align: center;
+  background-color: #16bdf0;
+  padding: 1rem;
+  border-radius: 9px;
+}
+
+.current-label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.current-score {
+  font-size: 2.5rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: inherit;
+  border-radius: 50rem;
+  border-style: none;
+  text-transform: uppercase;
+  padding: 0.4rem 2rem;
+}
+
+.btn::first-letter {
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.btn--new {
+  top: 4%;
+}
+.btn--roll {
+  top: 67%;
+}
+
+.btn--hold {
+  top: 80%;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6rem;
+  top: 30%;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.wins-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+
+  background-color: rgb(38, 54, 58);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #3df8f2;
+  border-width: 4px;
+  padding: 10%;
+  z-index: 10;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+.wins-modal p {
+  text-align: center;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.player-score-container {
+  padding: 7%;
+  align-items: center;
+}
+
+.versus {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.winner {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.final-score {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.btn--new-modal {
+  top: 80%;
+}
+
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+    height: 90vh;
+    margin: 10%;
+  }
+  body {
+    height: auto;
+  }
+  .player {
+    padding: 0;
+    padding-top: 10%;
+  }
+  .current {
+    padding: 0;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+  .score {
+    font-size: 3rem;
+    margin-bottom: 10%;
+  }
+
+  .btn {
+    font-size: 0.7rem;
+    padding: 10px;
+    width: 35%;
+  }
+  .btn::first-letter {
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  .btn--new {
+    top: 1%;
+  }
+  .btn--roll {
+    left: 20%;
+  }
+  .btn--hold {
+    left: 80%;
+  }
+  .btn--hold,
+  .btn--roll {
+    top: 50%;
+  }
+  .dice {
+    top: 50%;
+    transform: translateX(-50);
+    transform: translate();
+    height: 3rem;
+  }
+}
+
+/* TODO: MAKE GAME RESPONSIVE - ADD MEDIA QUERIES FOR MODAL AND A MID RANGE WIDTH */
